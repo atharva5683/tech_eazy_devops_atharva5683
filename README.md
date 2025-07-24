@@ -18,11 +18,15 @@ Update configuration in config files:
 - Set s3_bucket_name = "your-unique-bucket-name" for log storage
 
 ## Deploy
+Go to terraform directory first:
 ```
+cd terraform
 .\deploy.ps1 -Stage dev
 ```
 or
 ```
+cd terraform
+chmod +x deploy.sh
 ./deploy.sh dev
 ```
 
@@ -77,6 +81,7 @@ aws s3 ls s3://your-bucket-name/ --recursive
 Note: The application EC2 instance has an IAM role with write-only permissions to the S3 bucket, so verification should be done from a separate instance with read permissions.
 
 ## Cleanup
+From terraform directory:
 ```
 terraform destroy -var-file="configs/dev_config.tfvars" -auto-approve
 ```
