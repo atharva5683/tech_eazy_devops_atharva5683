@@ -12,11 +12,6 @@ export AWS_ACCESS_KEY_ID="your_access_key"
 export AWS_SECRET_ACCESS_KEY="your_secret_key"
 ```
 
-Update configuration in config files:
-- Edit configs/dev_config.tfvars or configs/prod_config.tfvars
-- Change key_name = "dev-key" to your SSH key name
-- Set s3_bucket_name = "your-unique-bucket-name" for log storage
-
 ## Deploy
 Go to terraform directory first:
 ```
